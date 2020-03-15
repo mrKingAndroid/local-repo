@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import '../../styles/swiper.min.css'
 import './scrollgoods.css'
 import Swiper from 'react-id-swiper'
-import nutrition from '../../api/nutrition'
+// import nutrition from '../../api/nutrition'
 import defaultImg from '../../assets/image/product-img.png'
 
 const ScrollGoodsModule: PageComponent = props => {
@@ -20,16 +20,15 @@ const ScrollGoodsModule: PageComponent = props => {
     //     // setCookingHomeVOList(data)
     //     setListHot(data)
     // })
-    console.log('  8 8 8 8 8 - - - - - 8 8 8 8 8 - - - - : ',props)
 
     if (props.dataList.length > 0) {
       setListHot(props.dataList)
     } else {
       // // 热门食材列表
-      nutrition.foodInfos.listByHot().then(data => {
-        console.log('热门食材列表 - :', data)
-        setListHot(data)
-      })
+      // nutrition.foodInfos.listByHot().then(data => {
+      //   console.log('热门食材列表 - :', data)
+      //   setListHot(data)
+      // })
     }
 
     console.log('滚动组件  - :', props.dataList)
